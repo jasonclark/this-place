@@ -8,7 +8,7 @@
 $pageTitle = 're: This Place - Location Matters';
 $subTitle = 'MSU Libraries';
 //declare filename for additional stylesheet variable - default is "none"
-$customCSS = 'master.css';
+$customCSS = 'global.css';
 //create an array with filepaths for multiple page scripts - default is meta/scripts/global.js
 $customScript[0] = './meta/scripts/global.js';
 $customScript[1] = 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js';
