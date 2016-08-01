@@ -134,7 +134,7 @@ $base = 'http://worldcat.org/webservices/catalog/search/worldcat/opensearch?';
 
 
 $params = array(
-  'wskey' => 'B3F6fY0fdaYyWFaU2a5a25QD28BsxH6H8wZnViTESKxZZBR7Fg71nC0V6IeXa78EKAYsGzhMAyYyEihv', //worldcat API key
+  'wskey' => 'ADD-API-KEY-HERE', //worldcat API key
   'servicelevel' => 'full', //worldcat api service level
   'format' => 'atom', //type of format to output
   'cformat' => 'mla', //type of citation format to output
@@ -249,7 +249,7 @@ $base = 'https://api.flickr.com/services/rest/?';
 
 $params = array(
   'method' => 'flickr.photos.search', //flickr api request method
-  'api_key' => 'fdd5d68bc77f86305024f4da4e078961', //flickr API key
+  'api_key' => 'ADD-API-KEY-HERE', //flickr API key
   'extras' => 'url_sq,url_m,url_z,url_l', //type of image format to output
   'page' => $start, //record result number to start from
   'per_page' => $count, //number of results to return
@@ -310,7 +310,7 @@ $lat = isset($_REQUEST['lat']) ? htmlentities(strip_tags($_REQUEST['lat'])) : '4
 //set default value for latitude to geonames API
 $lng = isset($_REQUEST['lng']) ? htmlentities(strip_tags($_REQUEST['lng'])) : '-111.050499';
 //set default value for geonames user, enables use of geonames web service - http://www.geonames.org/manageaccount
-$user = isset($_GET['user']) ? htmlentities(strip_tags($_GET['user'])) : 'jaclark';
+$user = isset($_GET['user']) ? htmlentities(strip_tags($_GET['user'])) : 'ADD-GEONAMES-USER-HERE';
 //set default search radius for geonames API
 $radius = isset($_GET['radius']) ? $_GET['radius'] : '15';
 
@@ -390,7 +390,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'video';
 $base = 'https://www.googleapis.com/youtube/'.$version.'/search?';
 
 $params = array(
-  'key' => 'AIzaSyDX0QBfOHUQW_7aKnFQyVHZ93knmnVWHoY', // ADD YOUR_YOUTUBE_API_KEY_HERE
+  'key' => 'ADD-API-KEY-HERE', // ADD YOUR_YOUTUBE_API_KEY_HERE
   'part' => 'id,snippet', //part parameter specifies search resource properties that the API response will include
   'location' => "$lat,$lng", //latitude setting,longitude setting
   'locationRadius' => $radius,//location-radius setting
@@ -474,7 +474,7 @@ endif;
 //forecast.io api docs at https://developer.forecast.io/docs/v2
 
 //ADD YOUR_FORECAST.IO_API_KEY_HERE
-$key = 'bd9363de1a48419bf2af38384f5afe8b';
+$key = 'ADD-API-KEY-HERE';
 //set default value for latitude to youtube API
 $lat = isset($_REQUEST['lat']) ? strip_tags(floatval($_REQUEST['lat'])) : '45.68346';
 //set default value for latitude to youtube API
@@ -602,7 +602,7 @@ $lng = isset($_REQUEST['lng']) ? strip_tags(floatval($_REQUEST['lng'])) : '-111.
 $base = 'http://maps.googleapis.com/maps/api/streetview?';
 
 $params = array(
-  'key' => 'AIzaSyC8ijKFJSSkS7NgWzko4UcaMAX6fAoIeNs', // ADD YOUR_YOUTUBE_API_KEY_HERE
+  'key' => 'ADD-API-KEY-HERE', // ADD YOUR_GOOGLE_MAPS_API_KEY_HERE
   'size' => '600x300', //set image size
   'sensor' => 'true', //set whether or not the request came from a device using a location sensor
   'location' => "$lat,$lng", //latitude setting,longitude setting
