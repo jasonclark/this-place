@@ -40,10 +40,8 @@ if ($customScript) {
         <li id="tab3"><a href="./code.php">View Code</a></li>
     </ul><!-- end tabs unordered list -->
 	<div class="main">
-		<h2 class="mainHeading">CODE: local stuff search app using Open Library API for thumbnails, Google Ajax Search API for Geolocation, and Worldcat Basic Search API for Item Results</h2>
-		<p><a href="index.txt" title="code for geolocation and search form">Geolocation and search form (Javascript and HTML)</a></p>
-		<p><a href="search.txt" title="code for search form and php">Search logic (PHP)</a></p>
-		<!--<p><a href="amazon-api-class.txt" title="code for thumbnails">Amazon API Library for Thumbnails (PHP)</a></p>-->
+		<h2 class="mainHeading">CODE: "this place" search app using Open Library API for thumbnails, Google Maps Search API for Geolocation, and Worldcat Basic Search API for Item Results</h2>
+		<p>Source code is available at <a href="http://www.jasonclark.info">jasonclark.info</a> and on <a href="https://github.com/jasonclark/this-place">GitHub</a></a></p>
 	</div><!-- end div main -->
 </div><!-- end container div -->
 </body>
