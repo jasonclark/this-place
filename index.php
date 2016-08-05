@@ -17,7 +17,7 @@ $customScript[0] = './meta/scripts/global.js';
 <link rel="alternate" type="application/rss+xml" title="MSU Libraries: Tools" href="http://feeds.feedburner.com/msulibrarySpotlightTools" />
 <?php
 if ($customCSS != 'none') {
-echo '<link href="'.dirname($_SERVER['PHP_SELF']).'./meta/styles/'.$customCSS.'" media="screen" rel="stylesheet" type="text/css"/>'."\n";
+echo '<link href="'.dirname($_SERVER['PHP_SELF']).'/meta/styles/'.$customCSS.'" media="screen" rel="stylesheet" type="text/css"/>'."\n";
 }
 ?>
 </head>
