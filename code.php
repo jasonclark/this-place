@@ -13,21 +13,11 @@ $customScript[0] = './meta/scripts/global.js';
 <title><?php echo($pageTitle); ?> : Montana State University Libraries</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="alternate" type="application/rss+xml" title="MSU Libraries: Tools" href="http://feeds.feedburner.com/msulibrarySpotlightTools" />
-<style type="text/css" media="screen, projection, handheld">
-<!-- @import url("./meta/styles/default.css"); -->
-<!--
-<?php if ($customCSS != 'none') {
-	echo '@import url("'.dirname($_SERVER['PHP_SELF']).'/meta/styles/'.$customCSS.'");'."\n";
-}
-?>
--->
-</style>
 <?php
-if ($customScript) {
-  $counted = count($customScript);
-  for ($i = 0; $i < $counted; $i++) {
-   echo '<script type="text/javascript" src="'.$customScript[$i].'"></script>'."\n";
-  }
+if ($customCSS != 'none') {
+?>
+<link href="<?php echo dirname($_SERVER['PHP_SELF']); ?>/meta/styles/<?php echo $customCSS; ?>" rel="stylesheet"/>
+<?php
 }
 ?>
 </head>
@@ -44,5 +34,13 @@ if ($customScript) {
 		<p>Source code is available at <a href="http://www.jasonclark.info">jasonclark.info</a> and on <a href="https://github.com/jasonclark/this-place">GitHub</a></a></p>
 	</div><!-- end div main -->
 </div><!-- end container div -->
+<?php
+if ($customScript) {
+  $counted = count($customScript);
+  for ($i = 0; $i < $counted; $i++) {
+   echo '<script type="text/javascript" src="'.$customScript[$i].'"></script>'."\n";
+  }
+}
+?>
 </body>
 </html>
