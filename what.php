@@ -38,7 +38,9 @@ if ($customCSS != 'none') {
 if ($customScript) {
   $counted = count($customScript);
   for ($i = 0; $i < $counted; $i++) {
-   echo '<script type="text/javascript" src="'.$customScript[$i].'"></script>'."\n";
+?>
+<script type="text/javascript" src="<?php echo $customScript[$i]; ?>" defer></script>
+<?php
   }
 }
 ?>
