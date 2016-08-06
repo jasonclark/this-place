@@ -80,20 +80,11 @@ function add_s($num,$word) {
 <title><?php echo($pageTitle); ?> : Montana State University Libraries</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="alternate" type="application/rss+xml" title="MSU Libraries: Tools" href="http://feeds.feedburner.com/msulibrarySpotlightTools" />
-<style type="text/css" media="screen, projection, handheld">
-<!--
-<?php if ($customCSS != 'none') {
-	echo '@import url("'.dirname($_SERVER['PHP_SELF']).'/meta/styles/'.$customCSS.'");'."\n";
-}
-?>
--->
-</style>
 <?php
-if ($customScript) {
-  $counted = count($customScript);
-  for ($i = 0; $i < $counted; $i++) {
-   echo '<script type="text/javascript" src="'.$customScript[$i].'"></script>'."\n";
-  }
+if ($customCSS != 'none') {
+?>
+<link href="<?php echo dirname($_SERVER['PHP_SELF']); ?>/meta/styles/<?php echo $customCSS; ?>" rel="stylesheet"/>
+<?php
 }
 ?>
 </head>
@@ -793,5 +784,13 @@ foreach ($request->entry as $entry) {
 
 	</div><!-- end div main -->
 </div><!-- end container div -->
+<?php
+if ($customScript) {
+  $counted = count($customScript);
+  for ($i = 0; $i < $counted; $i++) {
+   echo '<script type="text/javascript" src="'.$customScript[$i].'"></script>'."\n";
+  }
+}
+?>
 </body>
 </html>
