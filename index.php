@@ -8,7 +8,6 @@ $subTitle = 'MSU Libraries';
 $customCSS = 'global.css';
 //create an array with filepaths for multiple page scripts - default is meta/scripts/global.js
 $customScript[0] = './meta/scripts/global.js';
-$customScript[1] = 'https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js';
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
@@ -92,7 +91,6 @@ function initialize() {
 	      	if (status == google.maps.GeocoderStatus.OK) {
 	        	if (results[1]) {
 				document.getElementById("loc").innerHTML = results[1].formatted_address;
-		        	//$("loc").innerHTML = results[1].formatted_address;
 				document.getElementById("q").value = results[1].formatted_address.toLowerCase();
 	          }
 	        }
