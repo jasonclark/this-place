@@ -91,8 +91,9 @@ function initialize() {
 	    	geocoder.geocode({'latLng': pos}, function(results, status) {
 	      	if (status == google.maps.GeocoderStatus.OK) {
 	        	if (results[1]) {
-		        	$("loc").innerHTML = results[1].formatted_address;
-							document.getElementById("q").value = results[1].formatted_address.toLowerCase();
+				document.getElementById("loc").innerHTML = results[1].formatted_address;
+		        	//$("loc").innerHTML = results[1].formatted_address;
+				document.getElementById("q").value = results[1].formatted_address.toLowerCase();
 	          }
 	        }
 	      });
