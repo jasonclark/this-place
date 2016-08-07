@@ -198,7 +198,8 @@ foreach ($request->entry as $entry) {
 		}
 
 		if ($isbn != 'not available') {
-		$remoteImageUrl = 'http://covers.openlibrary.org/b/isbn/'.$isbn.'-S.jpg';
+			$remoteImageUrl = 'https://syndetics.com/index.aspx?isbn='.$isbn.'/sc.jpg';
+			//$remoteImageUrl = 'http://covers.openlibrary.org/b/isbn/'.$isbn.'-S.jpg';
 			list($width, $height) = getimagesize($remoteImageUrl);
 			//echo $width;
 			if ($width > 30){
