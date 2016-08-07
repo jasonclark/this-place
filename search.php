@@ -167,22 +167,11 @@ if ($totalResults > 0):
 <?php
 //parse returned data elements from api call and display as html
 
-//prepare dublin core namespace for parsing
-$dc = $request->children('http://purl.org/dc/elements/1.1/');
-
 foreach ($request->entry as $entry) {
 	$title = htmlentities($entry->title);
 	$creator = htmlentities($entry->author->name);
 	$cite = htmlentities($entry->content);
 	$url = $entry->id;
-	//get unique video id
-	//$arr = explode('/',$entry->id);
-	//$id = $arr[count($arr)-1];
-	//get nodes in media: namespace for media information
-	//$media = $entry->children('http://search.yahoo.com/mrss/');
-		//get video player URL
-		//$attrs = $media->group->player->attributes();
-		//$watch = $attrs['url'];
 	//prepare oclc namespace for parsing
 	$oclc = $entry->children('http://purl.org/oclc/terms/');
 	$oclcNumber = $oclc->recordIdentifier;
