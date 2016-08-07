@@ -167,15 +167,15 @@ if ($totalResults > 0):
 //parse returned data elements from api call and display as html
 
 foreach ($request->entry as $entry) {
+	//prepare dublin core namespace for parsing
+	$dc = $entry->children('http://purl.org/dc/elements/1.1/');
+	//prepare oclc namespace for parsing
+	$oclc = $entry->children('http://purl.org/oclc/terms/');
 	$title = htmlentities($entry->title);
 	$creator = htmlentities($entry->author->name);
 	$cite = htmlentities($entry->content);
 	$url = $entry->id;
-	//prepare oclc namespace for parsing
-	$oclc = $entry->children('http://purl.org/oclc/terms/');
 	$oclcNumber = $oclc->recordIdentifier;
-	//prepare dublin core namespace for parsing
-	$dc = $entry->children('http://purl.org/dc/elements/1.1/');
 		//get isbn
 		if ($dc->identifier != '') {
 			$isbn = explode(":", $dc->identifier[0]);
