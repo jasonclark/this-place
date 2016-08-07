@@ -123,7 +123,6 @@ $base = 'http://worldcat.org/webservices/catalog/search/worldcat/opensearch?';
 //$base = 'http://www.worldcat.org/webservices/catalog/search/sru?query=srw.kw+all+"'.trim(strip_tags(urlencode($topic))).'"+and+srw.su+all+"'.trim(strip_tags(urlencode($topic))).'"+and+srw.yr+<%3D+"'.date('Y').'"&amp;';
 //$base = 'http://www.worldcat.org/webservices/catalog/search/sru?query=srw.su+all+"'.trim(strip_tags(urlencode($q))).'"&amp;';
 
-
 $params = array(
   'wskey' => 'ADD-API-KEY-HERE', //worldcat API key
   'servicelevel' => 'full', //worldcat api service level
@@ -202,11 +201,11 @@ foreach ($request->entry as $entry) {
 
 ?>
 	<li>
-		<img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>"/>
+	<img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>"/>
         <p><a title="<?php echo title; ?>" href="<?php echo $url; ?>"><?php echo $title; ?></a></p>
         <p>
-		<?php echo html_entity_decode($cite); ?>
-		ISBN: <?php echo $isbn; ?><br />
+	<?php echo html_entity_decode($cite); ?>
+	ISBN: <?php echo $isbn; ?><br />
         OCLC #: <?php echo $oclcNumber; ?>
         </p>
 	</li>
