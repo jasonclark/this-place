@@ -104,7 +104,7 @@ if ($customCSS != 'none') {
 		<li><a href="#watch">Watch (youtube)</a></li>
 		<li><a href="#weather">Weather (forecast.io)</a></li>
 		<li><a href="#street">Street (google street view)</a></li>
-		<!--<li><a href="#hear">Hear (audioboo)</a></li>-->
+		<!--<li><a href="#hear">Hear (soundcloud)</a></li>-->
 		<!--<li><a href="#talk">Talk (twitter)</a></li>-->
 		<li><a title="convert this page to a PDF" href="http://pdfcrowd.com/url_to_pdf/?footer_text=source%20%u%20page%20%p%20of%20%n">Snapshot (pdf)</a></li>
 	</ul>
@@ -609,83 +609,18 @@ else: //show no results message
 endif;
 ?>
 
-<?php
-/* TURNED off AudioBoo API until as results were not topical
-//set default value for latitude to audioboo.fm API
-$lat = isset($_REQUEST['lat']) ? htmlentities(strip_tags($_REQUEST['lat'])) : '45.68346';
-//set default value for latitude to audioboo.fm API
-$lng = isset($_REQUEST['lng']) ? htmlentities(strip_tags($_REQUEST['lng'])) : '-111.050499';
-
-//api.audioboo.fm/audio_clips/located.xml?find[latitude]=45.68346&find[longitude]=-111.050499
-//set base url for our opensearch request to audioboo.fm API
-$base = 'http://api.audioboo.fm/audio_clips/located.xml?';
-
-$params = array(
-  'find[latitude]' => $lat, //latitude setting
-  'find[longitude]' => $lng, //longitude setting
-  'page[number]' => $start, //record result number to start from
-  'page[items]' => $count, //number of results to return
-  //'version' => '1.1', //api version
-  //audioboo.fm api docs at http://code.google.com/p/audioboo-api/
-);
-
-//build request, encode entities (using http_build_query), and send to audioboo.fm API
-$request = simplexml_load_file($base.http_build_query($params));
-
-//echo $base.http_build_query($params);
-
-$totalResults = $request->body->totals->count;
-
-if ($totalResults > 0):
-?>
+<!--
 <a name="hear"></a>
-<h2 class="subHeading">Hear (from audioboo.fm)<br />
-<?php echo $count; ?> out of a possible <?php echo $totalResults; ?> matches for your query <strong>"<?php echo urldecode($q); ?>"</strong></h2>
+<h2 class="subHeading">Hear (from SoundCloud)<br />
 <ol>
-
-<?php
-//parse returned data elements from api call and display as html
-foreach ($request->body->audio_clips->audio_clip as $entry) {
-	$id = $entry->id;
-	$title = $entry->title;
-	$duration = $entry->duration;
-	$date = $entry->uploaded_at;
-	$audio = $entry->urls->high_mp3;
-	$thumbnail = $entry->urls->image;
-	$lat = $entry->location->latitude;
-	$lng = $entry->location->longitude;
-?>
-
-	<li>
-		<img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>"/>
-        <p><a title="<?php echo title; ?>" href="<?php echo $audio; ?>"><?php echo $title; ?></a></p>
-        <p>duration: <?php echo $duration; ?></p>
-        <p>location: <?php echo $lat; ?>, <?php echo $lng; ?></p>
-        <p>date: <?php echo time_since($date); ?></p>
-        <p>id: <?php echo $id; ?></p>
-        <p>
-        <audio id="player" controls>
-        	<source src="<?php echo $audio; ?>" /> <!-- chrome/safari plays this, Firefox ignores -->
+<li>
+<audio id="player" controls>-->
+        	<!--<source src="" />--> <!-- chrome/safari plays this, Firefox ignores -->
         	<!-- <source src="audio.ogg" /> Firefox will play this -->
         	<!--<p>Your browser cannot play this audio</p>  IE-->
-        </audio>
-        </p>
-	</li>
-
-<?php
-}//close foreach loop
-?>
-</ol>
-
-<?php
-else: //show no results message
-?>
-<h2 class="subHeading">No audioboo.fm results for <strong><?php urldecode($q); ?></strong>.</h2>
-<p class="control"><a href="<?php echo htmlentities(strip_tags(basename(__FILE__))); ?>" class="refresh">Reset the page</a></p>
-<?php
-endif;
-*/
-?>
+<!--</audio>
+</li>
+</ol>-->
 
 <?php
 /* TURNED off Twitter API until oauth for API version 2 is added
