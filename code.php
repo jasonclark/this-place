@@ -14,6 +14,7 @@ $customScript[0] = './meta/scripts/global.js';
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title><?php echo($pageTitle); ?> : Montana State University Libraries</title>
+<meta name="description" content="Code samples for This-Place, location-based app that suggests items of interest from local context"/>
 <link rel="alternate" type="application/rss+xml" title="MSU Libraries: Tools" href="http://feeds.feedburner.com/msulibrarySpotlightTools" />
 <?php
 if ($customCSS != 'none') {
