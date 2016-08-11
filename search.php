@@ -1,9 +1,11 @@
 <?php
 //Testing the location APIs
-//http://oclc.org/developer/documentation/worldcat-search-api/using-api
+//worldcat api http://oclc.org/developer/documentation/worldcat-search-api/using-api
 //http://openlibrary.org/developers
 //flickr.com api docs at http://www.flickr.com/services/api/
-//audioboo.fm api docs at http://code.google.com/p/audioboo-api/
+//geonames api docs at http://www.geonames.org/export/web-services.html
+//youtube api docs at https://developers.google.com/youtube/
+
 //assign value for title of page
 $pageTitle = 're: This Place - Location Matters';
 $subTitle = 'MSU Libraries';
@@ -11,10 +13,9 @@ $subTitle = 'MSU Libraries';
 $customCSS = 'global.css';
 //create an array with filepaths for multiple page scripts - default is meta/scripts/global.js
 $customScript[0] = './meta/scripts/global.js';
-$customScript[1] = 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js';
 
 //functions to convert Atom feed date format 2008-11-03T21:30:06Z to "X seconds/minutes/hours/days ago"
-//dependencies: used in audioboo, twitter, and youtube api routines to convert published dates to hours/minutes ago
+//dependencies: used in youtube api routine to convert published dates to hours/minutes ago
 
 function time_since($your_timestamp) {
     $unix_timestamp = strtotime($your_timestamp);
