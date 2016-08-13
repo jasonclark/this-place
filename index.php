@@ -1,6 +1,12 @@
 <?php
-//Testing the W3c geolocation API and Worldcat Search API
+//Testing the W3c geolocation API and APIs below:
 //http://oclc.org/developer/documentation/worldcat-search-api/using-api
+//worldcat api http://oclc.org/developer/documentation/worldcat-search-api/using-api
+//http://openlibrary.org/developers
+//flickr.com api docs at http://www.flickr.com/services/api/
+//geonames api docs at http://www.geonames.org/export/web-services.html
+//youtube api docs at https://developers.google.com/youtube/
+
 //assign value for title of page
 $pageTitle = 're: This Place - Location Matters';
 $subTitle = 'MSU Libraries';
