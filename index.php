@@ -65,7 +65,7 @@ var geocoder;
 function initialize() {
   var mapOptions = {
     zoom: 6,
-		disableDefaultUI: true
+    disableDefaultUI: true
   };
   map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
 
@@ -75,12 +75,12 @@ function initialize() {
       var pos = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
 
       var s = document.querySelector('#status');
-				if (s.className == 'success') {
-					// not sure why we're hitting this twice in FF, I think it's to do with a cached result coming back
-					return;
-				}
-				s.innerHTML = "found you!";
-				s.className = 'success';
+      if (s.className == 'success') {
+      // not sure why we're hitting this twice in FF, I think it's to do with a cached result coming back
+        return;
+      }
+	s.innerHTML = "found you!";
+	s.className = 'success';
 
       var infowindow = new google.maps.InfoWindow({
         map: map,
@@ -92,9 +92,9 @@ function initialize() {
 
       geocoder = new google.maps.Geocoder();
       var lat = position.coords.latitude;
-			var lng = position.coords.longitude;
-			document.getElementById("lat").value = lat;
-			document.getElementById("lng").value = lng;
+      var lng = position.coords.longitude;
+      document.getElementById("lat").value = lat;
+      document.getElementById("lng").value = lng;
 	    if (geocoder) {
 	    	geocoder.geocode({'latLng': pos}, function(results, status) {
 	      	if (status == google.maps.GeocoderStatus.OK) {
@@ -106,11 +106,11 @@ function initialize() {
 	      });
 	    }
 }, function() {
-		handleNoGeolocation(true);
+      handleNoGeolocation(true);
 	});
-	} else {
-		//browser doesn't support Geolocation
-		handleNoGeolocation(false);
+} else {
+      //browser doesn't support Geolocation
+      handleNoGeolocation(false);
   }
 }
 
