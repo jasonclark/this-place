@@ -40,7 +40,7 @@ if ($customCSS != 'none') {
         <li id="tab2"><a href="./what.php">What is this?</a></li>
         <li id="tab3"><a href="./code.php">View Code</a></li>
     </ul><!-- end tabs unordered list -->
-	<div class="main">
+  <div class="main">
   <h2>Getting your location: <span id="status">checking...</span></h2>
   <div id="cantfindyou"></div>
   <div id="map-canvas" style="width:500px;height:300px;"></div>
@@ -98,9 +98,9 @@ function initialize() {
 	    if (geocoder) {
 	    	geocoder.geocode({'latLng': pos}, function(results, status) {
 	      	if (status == google.maps.GeocoderStatus.OK) {
-	        	if (results[1]) {
-				document.getElementById("loc").innerHTML = results[1].formatted_address;
-				document.getElementById("q").value = results[1].formatted_address.toLowerCase();
+	          if (results[1]) {
+			document.getElementById("loc").innerHTML = results[1].formatted_address;
+			document.getElementById("q").value = results[1].formatted_address.toLowerCase();
 	          }
 	        }
 	      });
