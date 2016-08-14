@@ -1,10 +1,11 @@
-/*Styles for code demos and template
+/*Styles for "this-place" demo and code template
 Author:   Jason A. Clark
 Version:  screen,projection,handheld - August 2016
 ----------------------------------------------- */
 /* =global default settings
 ----------------------------------------------- */
-body {font:1em normal Arial, Helvetica, sans-serif;margin:0;padding:0;line-height:1.7em;}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body {font-family:'Open Sans', Helvetica, sans-serif;font-size:1em;margin:0;padding:0;line-height:1.7em;}
 *, * focus {outline:none;margin:0;padding:0;}
 /* =element-specific settings
 ----------------------------------------------- */
