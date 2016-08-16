@@ -42,7 +42,7 @@ if ($customCSS != 'none') {
     </ul><!-- end tabs unordered list -->
 	<div class="main">
 		<h2 class="mainHeading">CODE: "this place" search app using Open Library API for thumbnails, Google Maps Search API for Geolocation, and Worldcat Basic Search API for Item Results</h2>
-		<p>Source code is available at <a href="http://www.jasonclark.info">jasonclark.info</a> and on <a href="https://github.com/jasonclark/this-place">GitHub</a></a></p>
+		<p>Source code is available at <a href="http://www.jasonclark.info">jasonclark.info</a> and on <a href="https://github.com/jasonclark/this-place">GitHub</a></p>
 	</div><!-- end div main -->
 </div><!-- end container div -->
 <?php
