@@ -8,7 +8,7 @@
 
 //assign value for title of page
 $pageTitle = 're: This Place - Location Matters';
-$subTitle = 'MSU Libraries';
+$subTitle = 'MSU Library';
 //declare filename for additional stylesheet variable - default is "none"
 $customCSS = 'global.css';
 //create an array with filepaths for multiple page scripts - default is meta/scripts/global.js
