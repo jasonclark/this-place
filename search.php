@@ -269,7 +269,7 @@ foreach ($request->photos->photo as $entry) {
 ?>
 
 	<li>
-		<img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>"/>
+	<img src="<?php echo $thumbnail; ?>" alt="<?php echo $title; ?>"/>
         <p><a title="<?php echo title; ?>" href="<?php echo $image; ?>"><?php echo $title; ?></a></p>
         <p>id: <?php echo $id; ?></p>
 	</li>
@@ -302,7 +302,7 @@ $radius = isset($_GET['radius']) ? $_GET['radius'] : '15';
 $base = 'http://api.geonames.org/findNearbyWikipedia?';
 
 $params = array(
-	'lat' => $lat, //latitude setting
+  'lat' => $lat, //latitude setting
   'lng' => $lng, //longitude setting
   'username'=> $user, //geonames username
   'maxRows' => $count, //number of results to return
@@ -339,7 +339,7 @@ foreach ($request->entry as $entry) {
         <p><a title="<?php echo title; ?>" href="<?php echo $url; ?>"><?php echo $title; ?></a></p>
         <p><?php echo $description; ?></p>
         <p>location: <?php echo $lat; ?>, <?php echo $lng; ?></p>
-		<p><img alt="<?php echo title; ?>" src="http://maps.google.com/maps/api/staticmap?center=<?php echo $lat; ?>,<?php echo $lng; ?>&zoom=13&size=320x320&markers=color:blue|<?php echo $lat; ?>,<?php echo $lng; ?>&mobile=true&sensor=false" /></p>
+	<p><img alt="<?php echo title; ?>" src="http://maps.google.com/maps/api/staticmap?center=<?php echo $lat; ?>,<?php echo $lng; ?>&zoom=13&size=320x320&markers=color:blue|<?php echo $lat; ?>,<?php echo $lng; ?>&mobile=true&sensor=false" /></p>
         <p>type: <?php echo $type; ?></p>
         <p>* About <?php echo $distance; ?> miles from you</p>
 	</li>
@@ -391,9 +391,9 @@ echo $base.http_build_query($params);
 $request = file_get_contents($base.http_build_query($params));
 
 if ($request === FALSE) {
-	//API call failed, display message to user
-	echo '<p><strong>It looks like we can\'t communicate with the API at the moment.</strong></p>'."\n";
-	exit();
+  //API call failed, display message to user
+  echo '<p><strong>It looks like we can\'t communicate with the API at the moment.</strong></p>'."\n";
+  exit();
 }
 
 //create json object(s) out of response from API; set to "true" to turn response into an array
@@ -424,7 +424,7 @@ foreach ($result->items as $item) {
 
 ?>
 	<li>
-		<img src="<?php echo $image; ?>" alt="<?php echo $title; ?>"/>
+	<img src="<?php echo $image; ?>" alt="<?php echo $title; ?>"/>
         <p><a title="<?php echo title; ?>" href="https://www.youtube.com/watch?v=<?php echo $id; ?>"><?php echo $title; ?></a></p>
         <p><?php echo $description; ?></p>
         <p>date: <?php echo $uploaded; ?></p>
@@ -432,11 +432,11 @@ foreach ($result->items as $item) {
         <p>id: <?php echo $id; ?></p>
         <p>url: https://www.youtube.com/watch?v=<?php echo $id; ?></p>
         <p>
-			<iframe itemprop="video" width="480" height="360"
-				src="https://www.youtube.com/embed/<?php echo $id; ?>?hd=1&modestbranding=1&version=3&autohide=1&showinfo=0&rel=0"
-				frameborder="0"
-				allowfullscreen>
-			</iframe>
+	<iframe itemprop="video" width="480" height="360"
+		src="https://www.youtube.com/embed/<?php echo $id; ?>?hd=1&modestbranding=1&version=3&autohide=1&showinfo=0&rel=0"
+		frameborder="0"
+		allowfullscreen>
+	</iframe>
         </p>
 	</li>
 
@@ -474,9 +474,9 @@ $apiURL = 'https://api.forecast.io/forecast/'.$key.'/'.$lat.','.$lng.'?exclude=m
 $request = file_get_contents($apiURL);
 
 if ($request === FALSE) {
-	//API call failed, display message to user
-	echo '<p><strong>It looks like we can\'t communicate with the API at the moment.</strong></p>'."\n";
-	exit();
+  //API call failed, display message to user
+  echo '<p><strong>It looks like we can\'t communicate with the API at the moment.</strong></p>'."\n";
+  exit();
 }
 
 //create json object(s) out of response from API; set to "true" to turn response into an array
@@ -504,7 +504,7 @@ $cloudCover = $result->currently->cloudCover;
 ?>
 	<dt>Current Conditions:</dt>
 	<dd><figure><canvas id="<?php echo $icon; ?>" width="64" height="64"></canvas></figure></dd>
-  <dd>summary: <?php echo $summary; ?></dd>
+        <dd>summary: <?php echo $summary; ?></dd>
 	<dd>icon shorthand: <?php echo $icon; ?></dd>
 	<dd>temperature: <?php echo $temperature; ?></dd>
 	<dd>wind: <?php echo $wind; ?></dd>
@@ -526,8 +526,8 @@ $cloudCover = $result->daily->data[0]->cloudCover;
 ?>
 	<dt>Tomorrow Conditions:</dt>
 	<dd><figure><canvas id="<?php echo $dayIcon; ?>" width="64" height="64"></canvas></figure></dd>
-  <dd>tomorrow summary: <?php echo $daySummary; ?></dd>
-  <dd>icon shorthand: <?php echo $dayIcon; ?></dd>
+        <dd>tomorrow summary: <?php echo $daySummary; ?></dd>
+        <dd>icon shorthand: <?php echo $dayIcon; ?></dd>
 	<dd>high temperature: <?php echo $highTemperature; ?></dd>
 	<dd>low temperature: <?php echo $lowTemperature; ?></dd>
 	<dd>wind: <?php echo $wind; ?></dd>
@@ -536,14 +536,14 @@ $cloudCover = $result->daily->data[0]->cloudCover;
 	<dd>cloud cover: <?php echo $cloudCover; ?></dd>
 	<dt>Weekly Conditions:</dt>
 	<dd><figure><canvas id="<?php echo $icon; ?>" width="64" height="64"></canvas></figure></dd>
-  <dd>summary: <?php echo $summary; ?></dd>
+        <dd>summary: <?php echo $summary; ?></dd>
 <?php
 //parse returned data elements from api call and display as html
 //$alert = $result->alerts->title[0];
 //foreach ($result->alerts as $item) {
 //alerts are possible, need to finish this code
 ?>
-	<!--<dt>Alerts:</dt>
+    <!--<dt>Alerts:</dt>
     <dd>alert: <?php //echo $description; ?></dd>-->
 <?php
 //}//close foreach loop
@@ -619,9 +619,9 @@ endif;
 <ol>
 <li>
 <audio id="player" controls>-->
-        	<!--<source src="" />--> <!-- chrome/safari plays this, Firefox ignores -->
-        	<!-- <source src="audio.ogg" /> Firefox will play this -->
-        	<!--<p>Your browser cannot play this audio</p>  IE-->
+  <!--<source src="" />--> <!-- chrome/safari plays this, Firefox ignores -->
+  <!-- <source src="audio.ogg" /> Firefox will play this -->
+  <!--<p>Your browser cannot play this audio</p>  IE-->
 <!--</audio>
 </li>
 </ol>-->
@@ -677,8 +677,8 @@ foreach ($request->entry as $entry) {
 	$creator = $entry->author->name;
 	$content = html_entity_decode($entry->content);
 	//prepare opensearch namespace for parsing
-		$google = $entry->children('http://base.google.com/ns/1.0');
-		$location = $google->location;
+	$google = $entry->children('http://base.google.com/ns/1.0');
+	$location = $google->location;
 	$id = $entry->id;
 	$published = $entry->published;
 	$tweet = $entry->link[0]->attributes()->href;
@@ -687,7 +687,7 @@ foreach ($request->entry as $entry) {
 ?>
 <!--
 	<li>
-		<img src="<?php //echo $thumbnail; ?>" alt="<?php //echo $creator; ?>"/>
+	<img src="<?php //echo $thumbnail; ?>" alt="<?php //echo $creator; ?>"/>
         <p><?php //echo $creator; ?></p>
         <p><?php //echo $content; ?></p>
         <p><?php //echo time_since($published); ?></p>
