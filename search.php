@@ -339,7 +339,7 @@ foreach ($request->entry as $entry) {
         <p><a title="<?php echo title; ?>" href="<?php echo $url; ?>"><?php echo $title; ?></a></p>
         <p><?php echo $description; ?></p>
         <p>location: <?php echo $lat; ?>, <?php echo $lng; ?></p>
-	<p><img alt="<?php echo title; ?>" src="http://maps.google.com/maps/api/staticmap?center=<?php echo $lat; ?>,<?php echo $lng; ?>&zoom=13&size=320x320&markers=color:blue|<?php echo $lat; ?>,<?php echo $lng; ?>&mobile=true&sensor=false" /></p>
+	<p><img alt="<?php echo title; ?>" src="https://maps.google.com/maps/api/staticmap?center=<?php echo $lat; ?>,<?php echo $lng; ?>&zoom=13&size=320x320&markers=color:blue|<?php echo $lat; ?>,<?php echo $lng; ?>&mobile=true&sensor=false" /></p>
         <p>type: <?php echo $type; ?></p>
         <p>* About <?php echo $distance; ?> miles from you</p>
 	</li>
@@ -583,7 +583,7 @@ $lat = isset($_REQUEST['lat']) ? strip_tags(floatval($_REQUEST['lat'])) : '45.68
 $lng = isset($_REQUEST['lng']) ? strip_tags(floatval($_REQUEST['lng'])) : '-111.050499';
 
 //set base url for our request to Google Street View Image API
-$base = 'http://maps.googleapis.com/maps/api/streetview?';
+$base = 'https://maps.googleapis.com/maps/api/streetview?';
 
 $params = array(
   'key' => 'ADD-API-KEY-HERE', // ADD YOUR_GOOGLE_MAPS_API_KEY_HERE
