@@ -33,6 +33,7 @@ fieldset#searchBox input:focus, textarea:focus {background:#ffc;}
 fieldset#searchBox input.text, textarea, select {width:20em;font:1.0em verdana,arial,sans-serif;padding:3px;margin:3px;border:1px solid gray;border-color:#aaa #ddd #ddd #aaa;}
 fieldset#searchBox input.submit {font:bold .95em arial,helvetica,sans-serif;background:#6A7389;color:#fff;padding:1px 2px;margin:0 0 2px 0;border:1px solid #283043;border-color:#9097A2 #283043 #283043 #9097A2;}
 input,select {vertical-align:middle;border-width:0;}
+input[type="email"],input[type="number"],input[type="search"],input[type="text"],input[type="tel"],input[type="url"],input[type="password"],textarea {-webkit-appearance:none;}
 fieldset {border:0 none;}
 form#searchBox {position:relative;width:85%;height:30px;background-color:#fff;border:1px solid #ddd;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}
 #searchBox label {display:none;}
