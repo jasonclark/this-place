@@ -4,7 +4,6 @@ Version:  screen,projection,handheld - August 2016
 ----------------------------------------------- */
 /* =global default settings
 ----------------------------------------------- */
-<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
 html {box-sizing:border-box;}
@@ -44,44 +43,9 @@ fieldset{border:0;}
 label{display:none;}
 .expand {background:url("../img/expand.gif") 0 50% no-repeat;padding-left:16px;}
 .refresh {background:url("../img/refresh.gif") 0 50% no-repeat;padding-left:18px;}
-=======
-@import url('https://fonts.googleapis.com/css?family=Roboto');
-body {font-family:"Roboto", Helvetica, sans-serif;font-size:1em;margin:0;padding:0;line-height:1.7em;}
-*, * focus {outline:none;margin:0;padding:0;}
-/* =element-specific settings
------------------------------------------------ */
-h1 {font: 2.5em normal Helvetica, sans-serif;padding:20px 0;color:#666;text-align:center;}
-h1 span {color:#aaa;}
-h1 small {font:0.3em normal Verdana, Arial, Helvetica, sans-serif;text-transform:uppercase;letter-spacing:.3em;display:block;color: #666;}
-h2.mainHeading {font:1.1em bold Helvetica, sans-serif;padding:15px 0;}
-h2.subHeading {font:1.2em bold Calibri, sans-serif;margin:30px 0 15px 0;padding:0 0 3px 0;border-bottom:1px solid #ccc;}
-/* =miscellaneous and special global settings
------------------------------------------------ */
-p.download {text-align:right;margin-right:4%;font-size:.8em;line-height:1.2em;}
-p.control {font-size:.8em;}
-.zip {width:20px;padding:0 23px 0 0;background:url("../img/zip.gif") no-repeat right;}
-.expand {line-height:12px;background:url("../img/expand.gif") 0 50% no-repeat;padding-left:16px;}
-.refresh {line-height:14px;background:url("../img/refresh.gif") 0 50% no-repeat;padding-left:18px;}
 #status {padding:5px;color:#fff;background:#ccc;}
 #status.fail {background:#c00;}
 #status.success {background:#0c0;}
-/* =forms
------------------------------------------------ */
-form#searchForm {margin:0;padding:15px 0;width:70%;}
-fieldset#searchBox {margin:0;padding:10px;border:1px solid #ccc;border-radius:7px;-moz-border-radius:7px;/* Mozilla */-webkit-border-radius:7px;/* Webkit */background:#F2F2F2;}
-fieldset#searchBox label {display:inline;font:bold 1.1em arial,helvetica,sans-serif;color:#213C69;}
-fieldset#searchBox input:focus, textarea:focus {background:#ffc;}
-fieldset#searchBox input.text, textarea, select {width:20em;font:1.0em verdana,arial,sans-serif;padding:3px;margin:3px;border:1px solid gray;border-color:#aaa #ddd #ddd #aaa;}
-fieldset#searchBox input.submit {font:bold .95em arial,helvetica,sans-serif;background:#6A7389;color:#fff;padding:1px 2px;margin:0 0 2px 0;border:1px solid #283043;border-color:#9097A2 #283043 #283043 #9097A2;}
-input,select {vertical-align:middle;border-width:0;}
-input[type="email"],input[type="number"],input[type="search"],input[type="text"],input[type="tel"],input[type="url"],input[type="password"],textarea {-webkit-appearance:none;}
-fieldset {border:0 none;}
-form#searchBox {position:relative;width:85%;height:30px;background-color:#fff;border:1px solid #ddd;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}
-#searchBox label {display:none;}
-#searchBox input {position:absolute;top:3px;left:0;margin:0 3px;padding:0;width:85%;line-height:25px;height:25px;font-size:1.4em;border:0;-webkit-appearance:none;}
-#searchBox button {position:absolute;top:0;right:0;cursor:pointer;margin:0;padding:0;width:30px;height:30px;float:left;background: url('../img/search.gif') no-repeat 50% 50%;text-indent:-999em;border:1px solid #ddd;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}
->>>>>>> 5b17c7192c30e06de847d2fa2a4f3e3f84dd2d3b
-
 /* =tabbed content box (includes ul#tabs and div#tabContents)
 ----------------------------------------------- */
 ul#tabs {margin:0 0 20px 0;padding-bottom:35px;padding-left:20px;list-style-type:none;border-bottom:1px solid #ccc;}
