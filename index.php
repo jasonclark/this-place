@@ -58,7 +58,6 @@ if ($customCSS != 'none') {
 </div><!-- end container div -->
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 <script>
-
 var map;
 var geocoder;
 
@@ -67,20 +66,20 @@ function initialize() {
     zoom: 6,
     disableDefaultUI: true
   };
-  map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
   //try HTML5 geolocation
-  if(navigator.geolocation) {
+  if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+      var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
       var s = document.querySelector('#status');
       if (s.className == 'success') {
-      // not sure why we're hitting this twice in FF, I think it's to do with a cached result coming back
+        // not sure why we're hitting this twice in FF, I think it's to do with a cached result coming back
         return;
       }
-	s.innerHTML = "found you!";
-	s.className = 'success';
+      s.innerHTML = "found you!";
+      s.className = 'success';
 
       var infowindow = new google.maps.InfoWindow({
         map: map,
@@ -95,31 +94,34 @@ function initialize() {
       var lng = position.coords.longitude;
       document.getElementById("lat").value = lat;
       document.getElementById("lng").value = lng;
-	    if (geocoder) {
-	    	geocoder.geocode({'latLng': pos}, function(results, status) {
-	      	if (status == google.maps.GeocoderStatus.OK) {
-	          if (results[1]) {
-			document.getElementById("loc").innerHTML = results[1].formatted_address;
-			document.getElementById("q").value = results[1].formatted_address.toLowerCase();
-	          }
-	        }
-	      });
-	    }
-}, function() {
+      if (geocoder) {
+        geocoder.geocode({
+          'latLng': pos
+        }, function(results, status) {
+          if (status == google.maps.GeocoderStatus.OK) {
+            if (results[1]) {
+              document.getElementById("loc").innerHTML = results[1].formatted_address;
+              document.getElementById("q").value = results[1].formatted_address.toLowerCase();
+            }
+          }
+        });
+      }
+    }, function() {
       handleNoGeolocation(true);
-	});
-} else {
-      //browser doesn't support Geolocation
-      handleNoGeolocation(false);
+    });
+  } else {
+    //browser doesn't support Geolocation
+    handleNoGeolocation(false);
   }
 }
 
 function handleNoGeolocation(errorFlag) {
+  var content;
   if (errorFlag) {
-    var content = 'Error: The Geolocation service failed.';
+    content = 'Error: The Geolocation service failed.';
     document.getElementById("cantfindyou").innerHTML = "Hmmm... I don't know. Good hiding!";
   } else {
-    var content = 'Error: Your browser doesn\'t support geolocation.';
+    content = 'Error: Your browser doesn\'t support geolocation.';
     document.getElementById("cantfindyou").innerHTML = "Hmmm... I don't know. Good hiding!";
   }
 
