@@ -5,39 +5,44 @@ Version:  screen,projection,handheld - August 2016
 /* =global default settings
 ----------------------------------------------- */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+html {box-sizing:border-box;}
 body {font-family:"Open Sans", Helvetica, sans-serif;font-size:1em;margin:0;padding:0;line-height:1.7em;}
 *, * focus {outline:none;margin:0;padding:0;}
-/* =element-specific settings
------------------------------------------------ */
-h1 {font: 2.5em normal Helvetica, sans-serif;padding:20px 0;color:#666;text-align:center;}
-h1 span {color:#aaa;}
-h1 small {font:0.3em normal Verdana, Arial, Helvetica, sans-serif;text-transform:uppercase;letter-spacing:.3em;display:block;color: #666;}
-h2.mainHeading {font:1.1em bold Helvetica, sans-serif;padding:15px 0;}
-h2.subHeading {font:1.2em bold Calibri, sans-serif;margin:30px 0 15px 0;padding:0 0 3px 0;border-bottom:1px solid #ccc;}
-/* =miscellaneous and special global settings
------------------------------------------------ */
-p.download {text-align:right;margin-right:4%;font-size:.8em;line-height:1.2em;}
-p.control {font-size:.8em;}
-.zip {width:20px;padding:0 23px 0 0;background:url("../img/zip.gif") no-repeat right;}
-.expand {line-height:12px;background:url("../img/expand.gif") 0 50% no-repeat;padding-left:16px;}
-.refresh {line-height:14px;background:url("../img/refresh.gif") 0 50% no-repeat;padding-left:18px;}
-#status {padding:5px;color:#fff;background:#ccc;}
-#status.fail {background:#c00;}
-#status.success {background:#0c0;}
-/* =forms
------------------------------------------------ */
-form#searchForm {margin:0;padding:15px 0;width:70%;}
-fieldset#searchBox {margin:0;padding:10px;border:1px solid #ccc;border-radius:7px;-moz-border-radius:7px;/* Mozilla */-webkit-border-radius:7px;/* Webkit */background:#F2F2F2;}
-fieldset#searchBox label {display:inline;font:bold 1.1em arial,helvetica,sans-serif;color:#213C69;}
-fieldset#searchBox input:focus, textarea:focus {background:#ffc;}
-fieldset#searchBox input.text, textarea, select {width:20em;font:1.0em verdana,arial,sans-serif;padding:3px;margin:3px;border:1px solid gray;border-color:#aaa #ddd #ddd #aaa;}
-fieldset#searchBox input.submit {font:bold .95em arial,helvetica,sans-serif;background:#6A7389;color:#fff;padding:1px 2px;margin:0 0 2px 0;border:1px solid #283043;border-color:#9097A2 #283043 #283043 #9097A2;}
-input,select {vertical-align:middle;border-width:0;}
-fieldset {border:0 none;}
-form#searchBox {position:relative;width:85%;height:30px;background-color:#fff;border:1px solid #ddd;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}
-#searchBox label {display:none;}
-#searchBox input {position:absolute;top:3px;left:0;margin:0 3px;padding:0;width:85%;line-height:25px;height:25px;font-size:1.4em;border:0;-webkit-appearance:none;}
-#searchBox button {position:absolute;top:0;right:0;cursor:pointer;margin:0;padding:0;width:30px;height:30px;float:left;background: url('../img/search.gif') no-repeat 50% 50%;text-indent:-999em;border:1px solid #ddd;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}
+*, *:before, *:after {box-sizing:inherit;margin:0;padding:0;}
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;margin:0;padding:0;}
+body{font-size:small;font:20px/1.6 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;max-width:80%;margin:0 auto;padding:50px 25px;}
+html{background:url("../img/library-card-zoom-bg.jpg") no-repeat fixed bottom;background-position:center center;background-size:cover;color:#666;}
+html ul{margin:1em 0;padding:0 0 0 40px;}
+header,main,aside {background-color:#fff;padding:0 1rem;}
+header{display:block;float:left;width:100%;-webkit-border-top-left-radius:5px;-moz-border-radius-topleft:5px;border-top-left-radius:5px;-webkit-border-top-right-radius:5px;-moz-border-radius-topright:5px;border-top-right-radius:5px;}
+main{display:block;float:left;width:100%;min-height:320px;}
+aside{display:block;float:left;left:0;bottom:0;height:auto;width:100%;border-top:1px dotted silver;-webkit-border-bottom-right-radius:5px;-moz-border-radius-bottomright:5px;border-bottom-right-radius:5px;-webkit-border-bottom-left-radius:5px;-moz-border-radius-bottomleft:5px;border-bottom-left-radius:5px;padding:1rem;}
+nav{width:95%;margin:0 auto;white-space:nowrap;text-align:center;}
+h1{font-weight:700;font-size:50px;line-height:1;color:#777;margin:1rem 0 0;}
+h2{font-weight:400;font-size:40px;text-transform:none;line-height:1;word-spacing:8px;margin:0 0 2rem;padding:0;}
+h3{display:inline;font-weight:700;font-size:20px;}
+p{margin:1rem 0;}
+table{font-size:inherit;font:100%;}
+pre,code,kbd,samp,tt{font-family:monospace;font-size:108%;line-height:100%;}
+pre{word-wrap:break-word;white-space:-moz-pre-wrap;white-space:pre-wrap;}
+a{outline:none;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none;display:inline-block;color:#777;position:relative;margin:0;padding:0;}
+a:hover{color:#f74f4f;}
+aside a{margin:0 .25rem;padding:0 .25rem;}
+a:hover.twitter{color:#00acee;}
+a::after {position: absolute;top: 100%;left: 0;width: 100%;height: 1px;background: rgb(192,192,192);content: '';opacity: 0;-webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;-moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;transition: height 0.3s, opacity 0.3s, transform 0.3s;-webkit-transform: translateY(-13px);-moz-transform: translateY(-13px);transform: translateY(-13px);}
+a:hover::after {height: 2px;opacity: 1;-webkit-transform: translateY(-3px);-moz-transform: translateY(-3px);transform: translateY(-3px);}
+a,button,input,select,textarea,label,summary {touch-action:manipulation;}
+.button {background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5));background:-moz-linear-gradient(center top, #79bbff 5%, #378de5 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#79bbff", endColorstr="#378de5");background-color:#79bbff;-webkit-border-radius:7px;-moz-border-radius:7px;border-radius:7px;text-indent:0;border:1px solid #84bbf3;display:block;color:#fff;height:45px;line-height:45px;width:131px;text-decoration:none;text-align:center;}
+.button:hover {background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff) );background:-moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#378de5", endColorstr="#79bbff");background-color:#378de5;}
+.button:active {position:relative;top:1px;}
+input{border:none;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 0 4px #666 inset;-moz-box-shadow:0 0 4px #666 inset;box-shadow:0 0 4px #666 inset;height:45px;line-height:25px;margin-bottom:15px;width:70%;text-indent:7px;}
+input:focus,button:focus{outline:none;}
+select,input,button,textarea{font:99% Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;}
+fieldset{border:0;}
+label{display:none;}
+.expand {background:url("../img/expand.gif") 0 50% no-repeat;padding-left:16px;}
+.refresh {background:url("../img/refresh.gif") 0 50% no-repeat;padding-left:18px;}
 
 /* =tabbed content box (includes ul#tabs and div#tabContents)
 ----------------------------------------------- */
@@ -48,16 +53,9 @@ ul#tabs li {margin:0;padding:0;display:inline;}
 #tabs a:hover {color:#001155;}
 body.default #tabs li#tab1 a, body.what #tabs li#tab2 a, body.code #tabs li#tab3 a {color:#000;background:#fff;border-bottom:1px solid #fff;}
 div#tabContents {margin:0 0 15px 0;padding:15px;clear:both;background:#fff;border:1px solid #ccc;border-top:none;}
-/* =container
------------------------------------------------ */
-.container {width:90%;margin:0 auto;}
+
 /* =main
 ----------------------------------------------- */
-div.main {margin:0 0 5px;padding:0 30px;overflow:hidden;font-size:.95em;width:100%;clear:both;}
-div.main .block {padding: 20px;background: #f0f0f0;border:1px solid #ccc;border-radius:7px;-moz-border-radius:7px;/* Mozilla */-webkit-border-radius:7px;/* Webkit */background:#F2F2F2;}
-div.main .block p {padding:5px 0;margin:5px 0;}
-div.main .block h3 {font:2em normal Georgia, "Times New Roman", Times, serif;margin: 0 0 10px;padding: 0 0 5px 0;border-bottom: 1px solid #ccc;}
-div.main .block img {float:left;margin: 10px 15px 15px 0;padding: 5px;background: #ddd;border: 1px solid #ccc;}
 div.main ul#nav{
 			margin:0 auto; 
 			font-family:Calibri, sans-serif;
@@ -85,14 +83,15 @@ div.main ul#nav a{
 			text-decoration:underline;
 		}
 
-/* =miscellaneous and special global settings
------------------------------------------------ */
-.postTitle {margin:25px 0 0 0;font:normal normal bold 1.1em/100% "arial",sans-serif;}
-.postMetadata {line-height:16px;background:url("../img/time.gif") 0 50% no-repeat;margin-bottom:25px;padding:5px 0 5px 19px;border-top:2px solid #f2f2f2;}
-.comment {line-height:16px;background:url("../img/comments.gif") 0 50% no-repeat;margin-left:25px;padding-left:19px;}
-span.date{display:block;text-transform:uppercase;font-size:.75em;color:#9f9f9f;padding-bottom:5px}
-.download {line-height:25px;background:url("../img/download.png") 0 50% no-repeat;margin-left:25px;padding-left:19px;}
-a.feed {margin:0 0 0 30px;padding:3px 3px 3px 18px;font-size:.6em;background:url("../img/feed.gif") no-repeat center left;}
-.postControls {margin:0 0 25px 0;padding:3px 0;}
-/*.play {line-height:16px;background:url("../img/play.png") 0 50% no-repeat;padding-left:19px;}*/
-object.play {width:300px;height:30px;line-height:30px;margin:0;padding:0;}
+/* small and medium screen styles */
+@media only screen and (max-width: 768px) {
+ body{padding:20px;max-width:100%;}
+ main{min-height:250px;}
+ aside h3,aside a{display:block;}
+ aside{border:none;}
+ aside a{border-top:1px solid silver;margin:0;padding:.25rem 0;}
+ nav{width:100%;text-align:left;}
+ h1{font-size:40px;}
+ h2{font-size:30px;line-height:1.2;}
+ input{width:100%;}
+}
