@@ -33,14 +33,18 @@ if ($customCSS != 'none') {
 ?>
 </head>
 <body class="<?php if(!isset($_GET['view'])) { echo 'default'; } else { echo $_GET['view']; } ?>">
-<h1><?php echo $pageTitle; ?><span>: <?php echo $subTitle; ?></span><small>(working code and proof of concepts)</small></h1>
-<div class="container">
+<header role="banner">
+<h1><?php echo $pageTitle; ?><span>: <?php echo $subTitle; ?></span></h1>
+</header>
+<nav>
     <ul id="tabs">
         <li id="tab1"><a href="./index.php">Demo App</a></li>
         <li id="tab2"><a href="./what.php">What is this?</a></li>
         <li id="tab3"><a href="./code.php">View Code</a></li>
     </ul><!-- end tabs unordered list -->
-  <div class="main">
+</nav>
+<div class="main">
+<main role="main">
   <h2>Getting your location: <span id="status">checking...</span></h2>
   <div id="cantfindyou"></div>
   <div id="map-canvas" style="width:500px;height:300px;"></div>
@@ -54,8 +58,8 @@ if ($customCSS != 'none') {
 	<button type="submit" class="button">Search</button>
 	</fieldset>
 	</form>
-	</div><!-- end div main -->
-</div><!-- end container div -->
+</main>
+</div><!-- end div main -->
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 <script>
 var map;
