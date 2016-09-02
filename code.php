@@ -33,18 +33,22 @@ if ($customCSS != 'none') {
 ?>
 </head>
 <body class="<?php if(!isset($_GET['view'])) { echo 'code'; } else { echo $_GET['view']; } ?>">
-<h1><?php echo $pageTitle; ?><span>: <?php echo $subTitle; ?></span><small>(working code and proof of concepts)</small></h1>
-<div class="container">
+<header role="banner">
+<h1><?php echo $pageTitle; ?><span>: <?php echo $subTitle; ?></span></h1>
+</header>
+<nav>
     <ul id="tabs">
         <li id="tab1"><a href="./index.php">Demo App</a></li>
         <li id="tab2"><a href="./what.php">What is this?</a></li>
         <li id="tab3"><a href="./code.php">View Code</a></li>
     </ul><!-- end tabs unordered list -->
-	<div class="main">
-		<h2 class="mainHeading">CODE: "this place" search app using Open Library API for thumbnails, Google Maps Search API for Geolocation, and Worldcat Basic Search API for Item Results</h2>
-		<p>Source code is available at <a href="https://www.lib.montana.edu/~jason/">jasonclark.info</a> and on <a href="https://github.com/jasonclark/this-place">GitHub</a></p>
-	</div><!-- end div main -->
-</div><!-- end container div -->
+</nav>
+<div class="main">
+<main role="main">
+    <h2 class="mainHeading">CODE: "this place" search app using Open Library API for thumbnails, Google Maps Search API for Geolocation, and Worldcat Basic Search API for Item Results</h2>
+    <p>Source code is available at <a href="https://www.lib.montana.edu/~jason/">jasonclark.info</a> and on <a href="https://github.com/jasonclark/this-place">GitHub</a></p>
+</main>
+</div><!-- end div main -->
 <?php
 if ($customScript) {
   $counted = count($customScript);
