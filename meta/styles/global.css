@@ -46,44 +46,15 @@ label{display:none;}
 #status {padding:5px;color:#fff;background:#ccc;}
 #status.fail {background:#c00;}
 #status.success {background:#0c0;}
-/* =tabbed content box (includes ul#tabs and div#tabContents)
------------------------------------------------ */
-ul#tabs {margin:0 0 20px 0;padding-bottom:35px;padding-left:20px;list-style-type:none;border-bottom:1px solid #ccc;}
-ul#tabs li {margin:0;padding:0;display:inline;}
-#tabs a:link, #tabs a:visited {margin-right:8px;padding:10px;background:#F2F2F2;border:1px solid #ccc;color:#666;float:left;font-size:1em;font-weight:normal;line-height:14px;text-decoration:none;border-top-left-radius:4px;border-top-right-radius:4px;-moz-border-radius-topleft:4px;-webkit-border-top-left-radius:4px;-moz-border-radius-topright:4px;-webkit-border-top-right-radius:4px;}
-#tabs a:link.active, #tabs a:visited.active	{color:#000;background:#fff;border-bottom:1px solid #fff;}
-#tabs a:hover {color:#001155;}
-body.default #tabs li#tab1 a, body.what #tabs li#tab2 a, body.code #tabs li#tab3 a {color:#000;background:#fff;border-bottom:1px solid #fff;}
-div#tabContents {margin:0 0 15px 0;padding:15px;clear:both;background:#fff;border:1px solid #ccc;border-top:none;}
 
-/* =main
------------------------------------------------ */
-div.main ul#nav{
-			margin:0 auto; 
-			font-family:Calibri, sans-serif;
-			/*border:1px solid #ccc;
-			border-width:1px 0;*/
-			list-style:none;
-			margin:0;
-			padding:0;
-			text-align:center;
-		}
-div.main ul#nav li{
-			display:inline;
-			padding-left:50px;
-		}
-div.main ul#nav a{
-			display:inline-block;
-			padding:3px 10px 3px 10px;
-		}
-		a{
-			color:#c00;
-			text-decoration:none;
-			font-weight:bold;
-		}
-		a:hover{
-			text-decoration:underline;
-		}
+/* =tabbed nav */
+#tabs {margin:23px 0 0 0;list-style:none;border-bottom:1px solid #ddd;}
+#tabs:before,#nav:after {display:table;content:"";}
+#tabs:after {clear:both;}
+#tabs > li {float:left;margin-bottom:-1px;margin-left:5px;font-size:1.6em;}
+#tabs > li > a {display:block;margin-right:2px;line-height:14px;border:1px solid transparent;border-radius:4px 4px 0 0;padding:8px 12px;}
+#tabs > li > a:hover {text-decoration:none;background-color:#eee;border-color:#eee #eee #ddd;}
+#tabs > .active > a,#tabs > .active > a:hover,body.default #tabs li#tab1 a,body.code #tabs li#tab2 a,body.what #tabs li#tab3 a {color:#555;cursor:default;background-color:#fff;border:1px solid #ddd;border-bottom-color:transparent;}
 
 /* small and medium screen styles */
 @media only screen and (max-width: 768px) {
