@@ -45,7 +45,7 @@ if ($customCSS != 'none') {
 </nav>
 <div class="main">
 <main role="main">
-  <h2>Getting your location: <span id="status">checking...</span></h2>
+  <p>Getting your location: <span id="status">checking...</span></p>
   <div id="cantfindyou"></div>
   <div id="map-canvas" style="width:500px;height:300px;"></div>
   <p>Do you want us to use the location of <strong><span id="loc"></span></strong> to find local interest items for you?</p>
