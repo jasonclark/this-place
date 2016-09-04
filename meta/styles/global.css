@@ -18,7 +18,7 @@ header,main,nav,aside {background-color:#fff;margin-top:.5rem;padding:.5rem;}
 header{display:block;float:left;width:100%;}
 main{display:block;float:left;width:100%;min-height:320px;}
 aside{display:block;float:left;left:0;bottom:0;height:auto;width:100%;border-top:1px dotted silver;-webkit-border-bottom-right-radius:5px;-moz-border-radius-bottomright:5px;border-bottom-right-radius:5px;-webkit-border-bottom-left-radius:5px;-moz-border-radius-bottomleft:5px;border-bottom-left-radius:5px;padding:1rem;}
-nav{width:95%;margin:0 auto;white-space:nowrap;text-align:center;}
+nav{display:block;float:left;width:100%;}
 h1{font-weight:700;font-size:50px;line-height:1;color:#777;margin:1rem 0 0;}
 h2{font-weight:400;font-size:40px;text-transform:none;line-height:1;word-spacing:8px;margin:0 0 2rem;padding:0;}
 h3{display:inline;font-weight:700;font-size:20px;}
@@ -48,7 +48,7 @@ label{display:none;}
 #status.success {background:#0c0;}
 
 /* =tabbed nav */
-#tabs {margin:23px 0 0 0;list-style:none;border-bottom:1px solid #ddd;}
+#tabs {float:left;margin:23px 0 0 0;list-style:none;border-bottom:1px solid #ddd;}
 #tabs:before,#nav:after {display:table;content:"";}
 #tabs:after {clear:both;}
 #tabs > li {float:left;margin-bottom:-1px;margin-left:5px;font-size:1.6em;}
