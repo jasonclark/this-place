@@ -48,7 +48,7 @@ label{display:none;}
 #status.success {background:#0c0;}
 
 /* =tabbed nav */
-#tabs {float:left;margin:23px 0 0 0;list-style:none;border-bottom:1px solid #ddd;}
+#tabs {float:left;font-size:.6em;margin:23px 0 0 0;list-style:none;border-bottom:1px solid #ddd;}
 #tabs:before,#nav:after {display:table;content:"";}
 #tabs:after {clear:both;}
 #tabs > li {float:left;margin-bottom:-1px;margin-left:5px;font-size:1.6em;}
