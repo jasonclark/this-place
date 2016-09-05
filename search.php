@@ -93,25 +93,29 @@ if ($customCSS != 'none') {
 ?>
 </head>
 <body class="<?php if(!isset($_GET['view'])) { echo 'default'; } else { echo $_GET['view']; } ?>">
+<header>
 <h1><?php echo $pageTitle; ?><span>: <?php echo $subTitle; ?></span><small>(working code and proof of concepts)</small></h1>
-<div class="container">
-    <ul id="tabs">
-        <li id="tab1"><a href="./index.php">Demo App</a></li>
-        <li id="tab2"><a href="./what.php">What is this?</a></li>
-        <li id="tab3"><a href="./code.php">View Code</a></li>
-    </ul><!-- end tabs unordered list -->
-	<div class="main">
-	<ul id="nav">
-		<li><a href="#read">Read (worldcat)</a></li>
-		<li><a href="#see">See (flickr)</a></li>
-		<li><a href="#learn">Learn (wikipedia)</a></li>
-		<li><a href="#watch">Watch (youtube)</a></li>
-		<li><a href="#weather">Weather (forecast.io)</a></li>
-		<li><a href="#street">Street (google street view)</a></li>
-		<!--<li><a href="#hear">Hear (soundcloud)</a></li>-->
-		<!--<li><a href="#talk">Talk (twitter)</a></li>-->
-		<li><a title="convert this page to a PDF" href="http://pdfcrowd.com/url_to_pdf/?footer_text=source%20%u%20page%20%p%20of%20%n">Snapshot (pdf)</a></li>
-	</ul>
+</header>
+<nav>
+  <ul id="tabs">
+    <li id="tab1"><a href="./index.php">Demo App</a></li>
+    <li id="tab2"><a href="./what.php">What is this?</a></li>
+    <li id="tab3"><a href="./code.php">View Code</a></li>
+  </ul><!-- end tabs unordered list -->
+</nav>
+<div class="main">
+<main>
+  <ul id="nav">
+    <li><a href="#read">Read (worldcat)</a></li>
+    <li><a href="#see">See (flickr)</a></li>
+    <li><a href="#learn">Learn (wikipedia)</a></li>
+    <li><a href="#watch">Watch (youtube)</a></li>
+    <li><a href="#weather">Weather (forecast.io)</a></li>
+    <li><a href="#street">Street (google street view)</a></li>
+    <!--<li><a href="#hear">Hear (soundcloud)</a></li>-->
+    <!--<li><a href="#talk">Talk (twitter)</a></li>-->
+    <li><a title="convert this page to a PDF" href="http://pdfcrowd.com/url_to_pdf/?footer_text=source%20%u%20page%20%p%20of%20%n">Snapshot (pdf)</a></li>
+  </ul>
 <?php
 //set default value for query to Worldcat Search API
 $q = isset($_REQUEST['q']) ? trim(htmlentities(strip_tags($_REQUEST['q']))) : 'montana';
@@ -709,9 +713,8 @@ foreach ($request->entry as $entry) {
 <?php
 //endif;
 ?>
-
-	</div><!-- end div main -->
-</div><!-- end container div -->
+</main>
+</div><!-- end div main -->
 <?php
 if ($customScript) {
   $counted = count($customScript);
