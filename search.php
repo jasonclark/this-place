@@ -94,7 +94,7 @@ if ($customCSS != 'none') {
 </head>
 <body class="<?php if(!isset($_GET['view'])) { echo 'default'; } else { echo $_GET['view']; } ?>">
 <header>
-<h1><?php echo $pageTitle; ?><span>: <?php echo $subTitle; ?></span><small>(working code and proof of concepts)</small></h1>
+<h1><?php echo $pageTitle; ?><span>: <?php echo $subTitle; ?></span></h1>
 </header>
 <nav>
   <ul id="tabs">
