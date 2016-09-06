@@ -54,7 +54,7 @@ label{display:none;}
 #tabs > li {float:left;margin-bottom:-1px;margin-left:5px;font-size:1.6em;}
 #tabs > li > a {display:block;margin-right:2px;line-height:14px;border:1px solid transparent;border-radius:4px 4px 0 0;padding:8px 12px;}
 #tabs > li > a:hover {text-decoration:none;background-color:#eee;border-color:#eee #eee #ddd;}
-#tabs > .active > a,#tabs > .active > a:hover,body.default #tabs li#tab1 a,body.code #tabs li#tab2 a,body.what #tabs li#tab3 a {color:#555;cursor:default;background-color:#fff;border:1px solid #ddd;border-bottom-color:transparent;}
+#tabs > .active > a,#tabs > .active > a:hover,body.default #tabs li#tab1 a,body.what #tabs li#tab2 a,body.code #tabs li#tab3 a {color:#555;cursor:default;background-color:#fff;border:1px solid #ddd;border-bottom-color:transparent;}
 
 .main ul#nav{
 			margin:0 auto;
