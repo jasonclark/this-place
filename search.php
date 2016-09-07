@@ -104,7 +104,7 @@ if ($customCSS != 'none') {
 }
 ?>
 </head>
-<body class="<?php if($fileNameOnly != 'index' || $fileNameOnly != 'search') { echo $fileNameOnly; } else { echo 'default'; } ?>">
+<body class="<?php if ($fileNameOnly == 'index' || $fileNameOnly == 'search') { echo 'default'; } else { echo $fileNameOnly; } ?>">
 <header>
 <h1><?php echo $pageTitle; ?><span>: <?php echo $subTitle; ?></span></h1>
 </header>
