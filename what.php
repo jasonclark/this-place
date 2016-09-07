@@ -7,6 +7,17 @@
 //geonames api docs at http://www.geonames.org/export/web-services.html
 //youtube api docs at https://developers.google.com/youtube/
 
+//get and set url protocol - for <link> rel=canonical and <body> class value for #tabs
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? 'https://' : 'http://';
+//set and sanitize global variables for URL construction
+$server = isset($_SERVER['SERVER_NAME']) ? htmlentities(strip_tags($_SERVER['SERVER_NAME'])) : null;
+$path = isset($_SERVER['PHP_SELF']) ? htmlentities(strip_tags(dirname($_SERVER['PHP_SELF']))) : null;
+$fileName = isset($_SERVER['SCRIPT_NAME']) ? htmlentities(strip_tags(basename($_SERVER['SCRIPT_NAME']))) : null;
+$fileNameURI = isset($_SERVER['REQUEST_URI']) ? htmlentities(strip_tags($_SERVER['REQUEST_URI'])) : null;
+$fileNameOnly = isset($_SERVER['SCRIPT_NAME']) ? substr($fileName, 0, strrpos($fileName, ".")) : null;
+//$fileNameOnly = isset($_SERVER['PATH_INFO']) ? pathinfo($fileName, PATHINFO_FILENAME) : null;
+$fileExtension = isset($_SERVER['PATH_INFO']) ? pathinfo($fileName, PATHINFO_EXTENSION) : null;
+
 //assign value for title of page
 $pageTitle = 're: This Place - Location Matters';
 $subTitle = 'MSU Library';
@@ -24,6 +35,7 @@ $customScript[0] = './meta/scripts/global.js';
 <title><?php echo($pageTitle); ?> : Montana State University Libraries</title>
 <meta name="description" content="About This-Place, location-based app that suggests items of interest from local context"/>
 <link rel="alternate" type="application/rss+xml" title="MSU Libraries: Tools" href="http://feeds.feedburner.com/msulibrarySpotlightTools" />
+<link rel="canonical" href="<?php echo $protocol.$server.$path.'/'.$fileName; ?>"/>
 <?php
 if ($customCSS != 'none') {
 ?>
@@ -32,7 +44,7 @@ if ($customCSS != 'none') {
 }
 ?>
 </head>
-<body class="<?php if(!isset($_GET['view'])) { echo 'what'; } else { echo $_GET['view']; } ?>">
+<body class="<?php if($fileNameOnly != 'index') { echo $fileNameOnly; } else { echo 'default'; } ?>">
 <header role="banner">
 <h1><?php echo $pageTitle; ?><span>: <?php echo $subTitle; ?></span></h1>
 </header>
