@@ -57,7 +57,7 @@ if ($customCSS != 'none') {
 </nav>
 <div class="main">
 <main role="main">
-    <h2 class="mainHeading">CODE: "this place" search app using Open Library API for thumbnails, Google Maps Search API for Geolocation, and Worldcat Basic Search API for Item Results</h2>
+    <p>CODE: "This-Place" search app using Open Library API for thumbnails, Google Maps Search API for Geolocation, and Worldcat Basic Search API for Item Results</p>
     <p>Source code is available at <a href="https://www.lib.montana.edu/~jason/">jasonclark.info</a> and on <a href="https://github.com/jasonclark/this-place">GitHub</a></p>
 </main>
 </div><!-- end div main -->
