@@ -7,11 +7,11 @@ Version:  screen,projection,handheld - August 2016
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
 html {box-sizing:border-box;}
-body {font-family:"Open Sans", Helvetica, sans-serif;font-size:1em;margin:0;padding:0;line-height:1.7em;}
+body {font-family:"Roboto", Helvetica, sans-serif;font-size:1em;margin:0;padding:0;line-height:1.7em;}
 *, * focus {outline:none;margin:0;padding:0;}
 *, *:before, *:after {box-sizing:inherit;margin:0;padding:0;}
 html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;margin:0;padding:0;}
-body{font-size:small;font:20px/1.6 Roboto, Helvetica, Arial, sans-serif;max-width:90%;margin:0 auto;padding:10px;}
+body{font-size:small;font:20px/1.6 "Roboto", Helvetica, sans-serif;max-width:90%;margin:0 auto;padding:10px;}
 html{background:url("../img/library-card-zoom-bg.jpg") no-repeat fixed bottom;background-position:center center;background-size:cover;color:#666;}
 html ul{margin:1em 0;padding:0 0 0 40px;}
 header,main,nav,aside {background-color:#fff;margin-top:.5rem;padding:.5rem;}
