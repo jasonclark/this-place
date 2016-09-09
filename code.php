@@ -18,9 +18,14 @@ $fileNameOnly = isset($_SERVER['SCRIPT_NAME']) ? substr($fileName, 0, strrpos($f
 //$fileNameOnly = isset($_SERVER['PATH_INFO']) ? pathinfo($fileName, PATHINFO_FILENAME) : null;
 $fileExtension = isset($_SERVER['PATH_INFO']) ? pathinfo($fileName, PATHINFO_EXTENSION) : null;
 
-//assign value for title of page
+//assign value for title of page, limit to 60-70 characters - for use in title and og:title tags
 $pageTitle = 're: This Place - Location Matters';
 $subTitle = 'MSU Library';
+//assign value for description of page, limit to 155 characters - for use in meta description and og:description tags
+$pageDescription = 'Code samples for This-Place, location-based app that suggests items of interest from local context.';
+//get file last modified date for use in Schema.org date properties
+$pageLastModified = date ('c', getlastmod());
+
 //declare filename for additional stylesheet variable - default is "none"
 $customCSS = 'global.css';
 //create an array with filepaths for multiple page scripts - default is meta/scripts/global.js
@@ -33,7 +38,15 @@ $customScript[0] = './meta/scripts/global.js';
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title><?php echo($pageTitle); ?> : Montana State University Libraries</title>
-<meta name="description" content="Code samples for This-Place, location-based app that suggests items of interest from local context"/>
+<meta name="description" content="<?php echo $pageDescription; ?>"/>
+<meta property="og:title" content="<?php echo $pageTitle; ?>"/>
+<meta property="og:description" content="<?php echo $pageDescription; ?>"/>
+<meta property="og:image" content="<?php echo $protocol.$server.$path; ?>/meta/img/clark-share-default.png"/>
+<meta property="og:url" content="<?php echo $protocol.$server.$path; ?>/"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:creator" property="og:site_name" content="@jaclark"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="http://www.jasonclark.info"/>
 <link rel="alternate" type="application/rss+xml" title="MSU Libraries: Tools" href="http://feeds.feedburner.com/msulibrarySpotlightTools" />
 <link rel="canonical" href="<?php echo $protocol.$server.$path.'/'.$fileName; ?>"/>
 <?php
