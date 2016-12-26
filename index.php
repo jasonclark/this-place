@@ -47,8 +47,6 @@ $customScript[0] = './meta/scripts/global.js';
 <meta name="twitter:creator" property="og:site_name" content="@jaclark"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:site" content="http://www.jasonclark.info"/>
-<meta http-equiv="x-dns-prefetch-control" content="on"/>
-<link rel="dns-prefetch" href="//fonts.googleapis.com"/>
 <link rel="alternate" type="application/rss+xml" title="MSU Libraries: Tools" href="http://feeds.feedburner.com/msulibrarySpotlightTools" />
 <link rel="canonical" href="<?php echo $protocol.$server.$path.'/'.$fileName; ?>"/>
 <?php
@@ -87,22 +85,21 @@ if ($customCSS != 'none') {
 	</form>
 </main>
 </div><!-- end div main -->
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 <script>
-var map;
-var geocoder;
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map-canvas'), {
+    center: {lat: 41.850033, lng: -87.6500523},
+    disableDefaultUI: true,
+    zoom: 6
+  });
 
-function initialize() {
-  var mapOptions = {
-    zoom: 6,
-    disableDefaultUI: true
-  };
-  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-  //try HTML5 geolocation
+  // try HTML5 geolocation.
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
-      var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+      var pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude
+      };
 
       var s = document.querySelector('#status');
       if (s.className == 'success') {
@@ -112,12 +109,11 @@ function initialize() {
       s.innerHTML = "found you!";
       s.className = 'success';
 
-      var infowindow = new google.maps.InfoWindow({
-        map: map,
-        position: pos,
-        content: 'You are here.'
+      var infoWindow = new google.maps.InfoWindow({
+        map: map
       });
-
+      infoWindow.setPosition(pos);
+      infoWindow.setContent('You are here.');
       map.setCenter(pos);
 
       geocoder = new google.maps.Geocoder();
@@ -137,39 +133,26 @@ function initialize() {
           }
         });
       }
+
     }, function() {
-      handleNoGeolocation(true);
+      handleLocationError(true, infoWindow, map.getCenter());
     });
   } else {
-    //browser doesn't support Geolocation
-    handleNoGeolocation(false);
+    // browser doesn't support Geolocation
+    handleLocationError(false, infoWindow, map.getCenter());
   }
 }
 
-function handleNoGeolocation(errorFlag) {
-  var content;
-  if (errorFlag) {
-    content = 'Error: The Geolocation service failed.';
-    document.getElementById("cantfindyou").innerHTML = "Hmmm... I don't know. Good hiding!";
-  } else {
-    content = 'Error: Your browser doesn\'t support geolocation.';
-    document.getElementById("cantfindyou").innerHTML = "Hmmm... I don't know. Good hiding!";
-  }
-
-  var options = {
-    map: map,
-    position: new google.maps.LatLng(60, 105),
-    content: content
-  };
-
-  var infowindow = new google.maps.InfoWindow(options);
-  map.setCenter(options.position);
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(browserHasGeolocation ?
+    'Error: The Geolocation service failed.' :
+    'Error: Your browser doesn\'t support geolocation.');
 }
-
-google.maps.event.addDomListener(window, 'load', initialize);
 </script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=ADD-YOUR-API-KEY-HERE&callback=initMap"></script>
 <?php
-if ($customScript) {
+if ($customScript) {  
   $counted = count($customScript);
   for ($i = 0; $i < $counted; $i++) {
 ?>
