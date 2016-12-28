@@ -116,7 +116,7 @@ function initMap() {
       infoWindow.setContent('You are here.');
       map.setCenter(pos);
 
-      geocoder = new google.maps.Geocoder();
+      var geocoder = new google.maps.Geocoder();
       var lat = position.coords.latitude;
       var lng = position.coords.longitude;
       document.getElementById("lat").value = lat;
@@ -125,7 +125,7 @@ function initMap() {
         geocoder.geocode({
           'latLng': pos
         }, function(results, status) {
-          if (status == google.maps.GeocoderStatus.OK) {
+          if (status === 'OK') {
             if (results[1]) {
               document.getElementById("loc").innerHTML = results[1].formatted_address;
               document.getElementById("q").value = results[1].formatted_address.toLowerCase();
