@@ -138,8 +138,8 @@ function initMap() {
       handleLocationError(true, infoWindow, map.getCenter());
     });
   } else {
-    // browser doesn't support Geolocation
-    handleLocationError(false, infoWindow, map.getCenter());
+      // browser doesn't support Geolocation
+      handleLocationError(false, infoWindow, map.getCenter());
   }
 }
 
