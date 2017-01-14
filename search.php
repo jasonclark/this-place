@@ -107,7 +107,18 @@ function add_s($num,$word) {
 <meta name="twitter:creator" property="og:site_name" content="@jaclark"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:site" content="http://www.jasonclark.info"/>
-<link rel="alternate" type="application/rss+xml" title="MSU Libraries: Tools" href="http://feeds.feedburner.com/msulibrarySpotlightTools" />
+<link rel="preconnect" href="//api.flickr.com" crossorigin/>
+<link rel="preconnect" href="//api.geonames.org" crossorigin/>
+<link rel="preconnect" href="//api.forecast.io" crossorigin/>
+<link rel="preconnect" href="//fonts.googleapis.com" crossorigin/>
+<link rel="preconnect" href="//fonts.gstatic.com" crossorigin/>
+<link rel="preconnect" href="//www.googleapis.com" crossorigin/>
+<link rel="preconnect" href="//maps.google.com" crossorigin/>
+<link rel="preconnect" href="//maps.googleapis.com" crossorigin/>
+<link rel="preconnect" href="//www.google-analytics.com" crossorigin/>
+<link rel="preconnect" href="https://www.google-analytics.com" crossorigin/>
+<link rel="preconnect" href="//syndetics.com" crossorigin/>
+<link rel="preconnect" href="//worldcat.org" crossorigin/>
 <link rel="canonical" href="<?php echo $protocol.$server.$path.'/'.$fileName; ?>"/>
 <?php
 if ($customCSS != 'none') {
