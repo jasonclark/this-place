@@ -47,7 +47,6 @@ $customScript[0] = './meta/scripts/global.js';
 <meta name="twitter:creator" property="og:site_name" content="@jaclark"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:site" content="http://www.jasonclark.info"/>
-<link rel="alternate" type="application/rss+xml" title="MSU Libraries: Tools" href="http://feeds.feedburner.com/msulibrarySpotlightTools" />
 <link rel="canonical" href="<?php echo $protocol.$server.$path.'/'.$fileName; ?>"/>
 <?php
 if ($customCSS != 'none') {
