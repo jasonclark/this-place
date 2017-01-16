@@ -44,6 +44,7 @@ $customScript[0] = './meta/scripts/global.js';
 <meta property="og:image" content="<?php echo $protocol.$server.$path; ?>/meta/img/clark-share-default.png"/>
 <meta property="og:url" content="<?php echo $protocol.$server.$path; ?>/"/>
 <meta property="og:type" content="website"/>
+<meta property="og:see_also" content="http://www.lib.montana.edu/~jason/about.html"/>
 <meta name="twitter:creator" property="og:site_name" content="@jaclark"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:site" content="http://www.jasonclark.info"/>
