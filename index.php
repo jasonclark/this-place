@@ -86,15 +86,15 @@ if ($customCSS != 'none') {
   <div id="cantfindyou"></div>
   <div id="map-canvas" style="width:500px;height:300px;"></div>
   <p>Do you want us to use the location of <strong><span id="loc"></span></strong> to find local interest items for you?</p>
-	<form id="searchBox" method="get" action="./search.php">
-	<fieldset>
-	<label for="q">Search</label>
-	<input type="hidden" name="lat" id="lat" value="" />
-	<input type="hidden" name="lng" id="lng" value="" />
-	<input type="text" maxlength="200" name="q" id="q" tabindex="1" value="" />
-	<button type="submit" class="button">Search</button>
-	</fieldset>
-	</form>
+    <form id="searchBox" method="get" action="./search.php">
+    <fieldset>
+      <label for="q">Search</label>
+      <input type="hidden" name="lat" id="lat" value="" />
+      <input type="hidden" name="lng" id="lng" value="" />
+      <input type="text" maxlength="200" name="q" id="q" tabindex="1" value="" />
+      <button type="submit" class="button">Search</button>
+    </fieldset>
+    </form>
 </main>
 </div><!-- end div main -->
 <script>
